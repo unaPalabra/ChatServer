@@ -94,6 +94,7 @@ public class NetClient extends JFrame implements KeyListener {
 			textArea.replaceRange("",textArea.getText().length()-1,textArea.getText().length());
 		}else {
 		textArea.append(c + "");
-		textArea.setCaretPosition(textArea.getDocument().getLength());}
+			textArea.setCaretPosition(textArea.getDocument().getLength());
+		}
 	}
 }

@@ -31,9 +31,6 @@ class Client implements Runnable {
 
             // создаем удобные средства ввода и вывода
             in = new Scanner(is);
-            if (in.equals((char)'8')) {
-                in.remove();
-            }
             out = new PrintStream(os);
 
             // читаем из сети и пишем в сеть
