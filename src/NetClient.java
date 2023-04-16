@@ -91,10 +91,15 @@ public class NetClient extends JFrame implements KeyListener {
 
 	void addCharToTextArea(char c) {
 		if (c == '\b'){
+			if(textArea.getLineCount() == 1){
+				textArea.append("");
+				return;
+			}
 			textArea.replaceRange("",textArea.getText().length()-1,textArea.getText().length());
 		}else {
 		textArea.append(c + "");
 			textArea.setCaretPosition(textArea.getDocument().getLength());
 		}
+
 	}
 }
